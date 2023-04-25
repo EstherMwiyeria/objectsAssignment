@@ -10,34 +10,17 @@
 //   { name: 'Max', age: 19 },
 // ];
 
+
+function listAges(people) {
+  return people.filter(person =>person.Age>=18,person=>person.name)
+}
 const people = [
-   { name: 'Alice', age: 17 },
+    { name: 'Alice', age: 17 },
    { name: 'Eunice', age: 22 },
    { name: 'Charlie', age: 14 },
    { name: 'Max', age: 19 },
-];
-function listAges(people) {
-    var str = "";
-    for(var i = 0; i < people.length; i++){
-        str += people[i].name;
-        str += people[i].age;
-        if(people[i].age>= 18)
-
-    }
-
-    
-}
-function listPeople(people) {
-    var str = "";
-    for(var i = 0; i < people.length; i++) {
-      str += people[i].name;
-      str += people[i].age;
-      if(people[i].age <= 10 || people[i].age >= 20) {
-        return people[i].name + "the kid " + people[i].age + "the adult " + "& " + people[i].age + "the senior";
-      }
-    }
-  }
-
+]
+console.log(listAges(people));
 
 
 // Write a function that takes an array of objects, where each object represents a product with a name, price, and category property. The function should return an object that groups the products by their categories, with the category names as keys and the arrays of products as values.
@@ -47,6 +30,7 @@ function listPeople(people) {
 //   { name: 'Headphones', price: 80, category: 'Electronics' },
 //   { name: 'Shoes', price: 60, category: 'Clothing' },
 // ];
+
 // Given an array of objects, where each object represents a student with a name and an array of scores, write a function that returns a new array containing the names of all students whose average score is greater than or equal to 85.
 // const students = [
 //   { name: 'John', scores: [90, 80, 85] },
@@ -63,3 +47,16 @@ function listPeople(people) {
 //     console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
 //   },
 // };
+const car = {
+  make: 'Ford',
+  model: 'Ranger',
+  year: 2023,
+  displayInfo: function() {
+   console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
+  },
+};
+car.age = 5
+function displayInfo(){
+  console.log(`Age is ${this.age} and year is ${this.year}`);
+}
+car.displayInfo()  
